@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <style>
+        .container{
+            background-color: burlywood;
+            margin:auto;
+            /* margin to center thing,container will vbe automatically in center */
+            width: 50%;
+            padding: 0px;
+            text-align: center;
+        }
+        .flex-container{
+            display: flex;
+            justify-content: center;
+        }
+        .row{
+            border-style: solid;
+            border-color: brown;
+            width: 150px; ;
+            height: 100px;
+        }
+        .panel-heading{
+            background-color:burlywood;
+            color: white;
+            text-align: center;
+        }
+        .flex-container>div{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- div is like a container -->
+        <h1 id="heading01">JQuery</h1>
+        <button id="btn01">BTN01</button>
+        <button id="btn02">BTN02</button>
+        <button id="btn03">BTN03</button>
+        <button id="btn04">BTN04</button>
+        <button id="btn05">BTN05</button>
+    </div>
+    <div class="flex-container">
+        <div id="panel1" class="row">
+            <div class="panel-heading">panel#1</div>
+            <div class="panel-body">content</div>
+        </div>
+        <div id="panel2" class="row">
+            <div class="panel-heading">panel#2</div>
+            <div class="panel-body">content</div>
+        </div>
+        <div id="panel3" class="row">
+            <div class="panel-heading">panel#3</div>
+            <div class="panel-body">content</div>
+        </div>
+        <div id="panel4" class="row">
+            <div class="panel-heading">panel#4</div>
+            <div class="panel-body">content</div>
+        </div>
+        <div id="panel5" class="row">
+            <div class="panel-heading">panel#5</div>
+            <div class="panel-body">content</div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js"></script>
+    <!-- jquery is in link -->
+    <script>
+        $(document).ready(function(){
+            $('#panel1').hide(300).show(400).hide(300).show(400);
+            $('#panel2').css({
+                backgroundColor:'coral',
+                opacity:'0.5'
+            });
+
+            $('#btn01').html('click me');
+            $('#btn02').on('click',function(){
+                //toggle on and toggle off
+                $('#panel3').slideToggle(300);
+                $('#panel4 .panel-body').html('Hello World');
+            });
+            $('#btn03').on('click',function(){
+                $('#heading01').slideUp(300).slideDown(400).css({'color':'white'});
+            })
+            $('#btn04').on('mouseover',function(){
+                $('.panel-body').hide(300).show(300);
+            })
+            $('#panel5').draggable();
+        });
+    </script>
+</body>
+</html>

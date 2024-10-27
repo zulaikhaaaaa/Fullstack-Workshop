@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Testing Ajax</h1>
+    <p id="demo">testing ajax</p>
+    <button id="btn"> Change Demo</button>
+
+    <script>
+        const demo = document.getElementById('demo');
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click',function(){
+            let xhtpp;
+            let url ='https://jsonplaceholder.typicode.com/users';
+            xhtpp = new XMLHttpRequest();
+            xhtpp.onreadystatechange=function(){
+                if(this.readyState== 4&&this.status==200){
+                    let data= JSON.parse.this.responseText;
+                    demo.innerHTML=this.responseText;
+                    console.log(this.responseText);
+                    console.log(data)
+                }
+            };
+            xhtpp.open('GET',url,true);
+            xhtpp.send();
+            renderHTML();
+            //create alist itm and appaned to the li element
+
+            function renderHTML (ourdata){
+                demo.innerHTML='';
+                ourdata.forEach(function(user){
+                    let listItem = document.createElement('li');
+                    listItem.textContent=user.id+' '+ user.name;
+                    demo.appendChild(listItem);
+                });
+                
+            };
+        });
+    </script>
+</body>
+</html>

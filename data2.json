@@ -1,0 +1,28 @@
+[
+    {
+      "name": "John Doe",
+      "matricNo": "12345678",
+      "program": "Computer Science"
+    },
+    {
+      "name": "Jane Smith",
+      "matricNo": "87654321",
+      "program": "Engineering"
+    },
+    {
+      "name": "Alice Johnson",
+      "matricNo": "23456789",
+      "program": "Business Administration"
+    },
+    {
+      "name": "Michael Lee",
+      "matricNo": "98765432",
+      "program": "Physics"
+    },
+    {
+      "name": "Sarah Williams",
+      "matricNo": "45678912",
+      "program": "Psychology"
+    }
+  ]
+  

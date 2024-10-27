@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    background-color: #333;
+}
+
+/* navigation bar start */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    /* space out item */
+    background-color: #386868;
+    align-items: center;
+    /* centerlise all items in container */
+}
+
+/* style menu container */
+.navbar-menu{
+    list-style: none;
+    /* no bulletpoint */
+    display: flex;
+    /* make it horizontal */
+    margin: 20px;
+    /* make all the list farther than the edge */
+}
+
+.navbar-item{
+/* li for navigation */
+    margin-left: 10px;
+}
+
+.navbar-name{
+    color: gold;
+    margin-left: 20px;
+    font-size: large;
+}
+
+.navbar-link{
+    text-decoration: none;
+    color:white;
+}
+
+.navbar-link:hover {
+    color: #f0a500; /* Gold-like color on hover */
+}
+/* end of nav */
+
+/* edu start */
+
+.edu{
+    margin:50px 50px 20px 50px;
+}
+
+.institute {
+    background-color:#93BAAC;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.institute button {
+    background: #264b4b;
+    color: gold;
+    padding: 20px;
+    border: none;
+    border-radius: 15px;
+    /* smoothen the edge of container */
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+    /* align the text to left */
+}
+
+.content {
+    display: none;
+    /* display nothing at first */
+    padding: 10px;
+    background: #93BAAC;
+    border-radius: 5px;
+    margin-top: 5px;
+    align-items: center;
+    /* vertical align */
+}
+
+.content img {
+    margin-right: 10px; /* Space between the image and the text */
+    max-width: 150px; /* Limit the image size */
+    height: auto;
+}
+
+.edu-talk {
+    flex: 1; /* Ensure the text takes up remaining space */
+}
+
+/* edu ends */
+
+/* my shot start */
+.study {
+    text-align: center;
+    margin: 100px 20px 50px 20px;
+}
+
+#study-title {
+    text-decoration: overline;
+    color: white;
+}
+
+#study-desc{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.study-item {
+    display: flex;
+    justify-content: center; 
+    /* centers items horizontally */
+    align-items: center;
+    /* centers items vertically */
+    gap: 10px;
+    /* adds space between items */
+    flex-wrap: wrap;
+    /* allow item in multiple line */
+}
+
+.study-logo {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(209, 199, 199); 
+    border-radius: 15px;
+    /* smoothen the edge */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px; 
+    /* adds margin around each logo */
+}
+
+.study-logo img {
+    max-width: 100%; 
+    /* ensure the image doesn't exceed its container */
+    max-height: 100%; 
+    /* ensure the image doesn't exceed its container */
+}
+
+/* my shot ends */
+
+/* FOOTER */
+footer {
+    text-align: center;
+    /*CENTERLIZE TEXT  */
+    padding: 8px 0;
+    background-color: #264b4b;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

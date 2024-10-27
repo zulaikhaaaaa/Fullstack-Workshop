@@ -1,0 +1,26 @@
+[
+    {
+        "name":"Ali",
+        "rooms":1000,
+        "isFull":true
+
+    },
+    {
+        "name":"Uthman",
+        "rooms":800,
+        "isFull":false
+
+    },
+    {
+        "name":"Hafsa",
+        "rooms":800,
+        "isFull":false
+
+    },
+    {
+        "name":"Maryam",
+        "rooms":1000,
+        "isFull":true
+
+    }
+]

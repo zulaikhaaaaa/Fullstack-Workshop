@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Testing Fetch</h1>
+    <p id="demo">let fetch change this part</p>
+    <button id="btn">Change demo</button>
+    <script>
+        const demo = document.getElementById('demo');
+        const btn =document.getElementById('btn');
+
+        addEventListener('click',function(){
+            // console.log("Test");
+            // console.log(fetch('https://jsonplaceholder.typicode.com/users'));
+            fetch('https://jsonplaceholder.typicode.com/users')
+            // error handling using if else statement
+            .then (res=>{
+                if(res.ok){console.log("OK")}
+                else{console.log("NOt ok")}
+                return res.json;
+            })
+            .then(data=> console.log(data))
+        })
+    </script>
+</body>
+</html>

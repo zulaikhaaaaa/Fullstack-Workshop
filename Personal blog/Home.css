@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    background-color: #333;
+}
+
+/* navigation bar start */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    /* space out item */
+    background-color: #386868;
+    align-items: center;
+    /* centerlise all items in container */
+}
+
+/* style menu container */
+.navbar-menu{
+    list-style: none;
+    /* no bulletpoint */
+    display: flex;
+    /* make it horizontal */
+    margin: 20px;
+    /* make all the list farther than the edge */
+}
+
+.navbar-item{
+/* li for navigation */
+    margin-left: 10px;
+}
+
+.navbar-name{
+    color: gold;
+    font-weight: bold;
+    font-size: larger;
+    margin-left: 20px;
+    font-size: large;
+}
+
+.navbar-link{
+    text-decoration: none;
+    color:white;
+}
+
+.navbar-link:hover {
+    color: #f0a500; /* Gold-like color on hover */
+}
+/* end of nav */
+
+/* ABOUT ME START */
+.me{
+    display: flex;
+    /* make items in one line */
+    justify-content: center;
+    /* make it vertically center */
+    margin-top: 100px;
+     /* make all align */
+     align-items: center;
+}
+
+#profile{
+    width: 25%;
+    height:25%;
+    border-radius: 50%;
+    border: 5px solid #386868;
+    /* make border solid and circle */
+}
+
+#me-about{
+    margin-left: 20px;
+    margin-right: 20px;
+    /* give some comfortable gap here */
+    background-color: #689696;
+    border-radius: 15px;
+    width: 70%;
+    height:25%;
+    color: white;
+}
+
+#me-title{
+    margin: 20px 0px 0px 20px;
+    text-align: center;
+    color: gold;
+    font-weight: bold;
+}
+
+#me-talks{
+    margin: 20px 0px 20px 20px;
+    text-align:center;
+}
+/* ABOUT ME END */
+
+/* FOOTER */
+footer {
+    text-align: center;
+    /*CENTERLIZE TEXT  */
+    padding: 8px 0;
+    background-color: #264b4b;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+

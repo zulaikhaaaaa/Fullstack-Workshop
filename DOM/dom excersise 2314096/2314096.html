@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="int1">Enter your first integer </label>
+    <input type="int" name="int1" id="int1">
+    
+
+    <br>
+    <label for="int2">Enter your second integer</label>
+    <input type="int" name="int2" id="int2">
+
+    <br>
+    <!-- using class to differentiate between functions -->
+    <button type="button">Add</button>
+    <button class="sub">Substract</button>
+    <button class="multi">Multiply</button>
+    <button class="divide">Divide</button>
+
+    <p id="result"></p>
+
+    <script>
+
+        function intialize(){
+            let num1 = document.getElementById("int1").value;
+            let num2 = document.getElementById("int2").value;
+            return[num1,num2];
+        }
+        function addIntegers () {
+            let [num1,num2]=intialize();
+            //using parseInt() method to change string to int .Using it directly to the formula
+            let add = parseInt(num1) + parseInt(num2);
+            document.getElementById("result").innerHTML = 
+              num1 + " + " + num2 + " = " + add;
+        } 
+        function subIntegers () {
+            let [num1,num2]=intialize();
+            //using parseInt() method to change string to int .Using it directly to the formula
+            let sub = parseInt(num1) - parseInt(num2);
+            document.getElementById("result").innerHTML = 
+              num1 + " - " + num2 + " = " + sub;
+        }
+        function multIntegers () {
+            let [num1,num2]=intialize();
+            //using parseInt() method to change string to int .Using it directly to the formula
+            let mult = parseInt(num1) * parseInt(num2);
+            document.getElementById("result").innerHTML = 
+              num1 + " x " + num2 + " = " + mult;
+        }
+        function divIntegers () {
+            let [num1,num2]=intialize();
+            //using parseInt() method to change string to int .Using it directly to the formula
+            let mult = parseInt(num1) / parseInt(num2);
+            document.getElementById("result").innerHTML = 
+              num1 + " / " + num2 + " = " + mult;
+        }
+
+        // Add event listener to the button
+        document.querySelector('button').addEventListener('click', addIntegers);
+        //add function for button by using class
+        document.querySelector('.sub').addEventListener('click', subIntegers);
+        document.querySelector('.multi').addEventListener('click', multIntegers);
+        document.querySelector('.divide').addEventListener('click', divIntegers);
+    </script>
+</body>
+</html>
+

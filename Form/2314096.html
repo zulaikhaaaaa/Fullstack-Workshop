@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2314096 Assignment:Order</title>
+    <!-- <script src="2314096.js"></script> Include JavaScript file -->
+</head>
+<body>
+    <form action="">
+        <!-- Customer Detail-->
+        <section id="custDetail">
+            <h3>CUSTOMER DETAIL</h3>
+            NAME: <input type="text" name="c_name" id="c_name"><br> <!-- Input field for customer name -->
+            TELEPHONE: <input type="tel" name="c_tel" id="c_tel"><hr> <!-- Input field for customer telephone -->
+        </section>
+        <!-- Order Detail-->
+        <section id="orderDetail">
+            <h3>ORDER DETAIL</h3>
+            APPLE(RM4.00/piece): <input type="number" name="o_apple" id="o_apple"><br> <!-- Input field for apple quantity -->
+            GRAPE(RM5.00/kilogram): <input type="number" name="o_grape" id="o_grape"><br> <!-- Input field for grape quantity -->
+        </section>
+        <!-- Order Button-->
+        <section id="orderButton">
+            <button id="orderButton">ORDER</button><hr> <!-- Button to submit order -->
+        </section>
+    </form>
+    <div id="display"></div> <!-- Display section for order details -->
+    
+    <!-- make it internal js -->
+    <script>
+    // Customer detail
+    const c_name = document.getElementById("c_name");
+    const c_tel = document.getElementById("c_tel");
+    // Get element for customer name input and telephone
+
+    // Order detail
+    const o_apple = document.getElementById("o_apple");
+    const o_grape = document.getElementById("o_grape");
+    // Get element for appleqty and kggrape
+
+    // Button
+    const button = document.getElementById("orderButton");
+
+    button.addEventListener('click', function(event){
+        event.preventDefault(); // Prevent form submission
+
+        // Calculate total price for each item
+        const totalApple = 4 * o_apple.value;
+        const totalGrape = 5 * o_grape.value;
+
+        // Calculate total price for all items
+        const totalPrice = totalApple + totalGrape;
+
+        // Display order details
+        let msg =
+            "PURCHASE DETAIL\n" +
+            "NAME: " + c_name.value + "\n" +
+            "TELEPHONE: " + c_tel.value + "\n\n" +
+            "ORDER DETAIL\n" +
+            "APPLE " + o_apple.value + " piece RM" + totalApple + "\n" +
+            "GRAPE " + o_grape.value + " kilogram RM" + totalGrape + "\n\n" +
+            "TOTAL RM\n" + totalPrice;
+
+        console.log("Name: " + c_name.value);
+        console.log("Telephone: " + c_tel.value);
+        console.log("Apple: " + o_apple.value);
+        console.log("Grape: " + o_grape.value);
+        console.log("Total: " + totalPrice);
+
+        const display = document.getElementById("display");
+        display.innerText = msg; // Display the whole message
+});
+
+    </script>
+</body>
+</html>

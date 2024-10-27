@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSon</title>
+</head>
+<body>
+    <h1>JSON</h1>
+    <script>
+        //JSON.stringify()->convert Js object to JSon string
+        //Json parse()-> convert Json string to JSon object
+
+        const Jname=["Ali","Uthman","Maryam","Hafsa"]
+        const Jmahallah=[
+                {
+                 "name":"Ali",
+                 "rooms":1000,
+                 "isFull":true,
+                 "block":["A","B","C","D","E"]      
+                }
+            ]    
+
+        console.log(name);
+        const JallMahallah=[
+            {
+                "name":"Ali",
+                "rooms":1000,
+                "isFull":true
+
+            },
+            {
+                "name":"Uthman",
+                "rooms":800,
+                "isFull":false
+
+            },
+            {
+                "name":"Hafsa",
+                "rooms":800,
+                "isFull":false
+
+            },
+            {
+                "name":"Maryam",
+                "rooms":1000,
+                "isFull":true
+
+            }
+        ]
+
+        const jstring=JSON.stringify(name);
+        const jstring2=JSON.stringify(mahallah);
+        const jstring3=JSON.stringify(allMahallah);
+
+        console.log(Jname);
+        console.log(Jmahallah);
+        console.log(JallMahallah);
+    </script>
+</body>
+</html>
